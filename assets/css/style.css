@@ -1,0 +1,147 @@
+/* global theme */
+:root {
+    --bg: #121214;
+    --surface: #1a1a1e;
+    --text: #e1e1e6;
+    --muted: #9494a1;
+    --accent: #4fc3f7;
+    --border: #24242b;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI Variable Text", "SF Pro Text", -apple-system, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* container */
+main, header, footer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+}
+
+header, footer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.75rem;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* links */
+h1, h2, h3 {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.4rem; }
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+/* post list */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.post-list li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    align-items: baseline;
+}
+
+.post-list time {
+    color: var(--muted);
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* articles */
+article time {
+    display: block;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1.25rem 0;
+}
+
+/* code highlighting */
+code, pre {
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.85rem;
+    background-color: var(--surface);
+    border-radius: 4px;
+}
+
+code {
+    padding: 0.15rem 0.3rem;
+    color: #ff79c6;
+}
+
+pre {
+    padding: 0.75rem 1rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+pre code {
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* footer */
+footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 2.5rem;
+}
