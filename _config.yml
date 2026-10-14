@@ -1,0 +1,25 @@
+# site settings
+title: "las-r's blog"
+author: "Nayif Ehan"
+description: "A collection of my thoughts."
+
+# url settings
+url: "https://las-r.github.io"
+baseurl: "/blog"
+
+# build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
