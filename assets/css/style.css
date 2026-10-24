@@ -60,7 +60,10 @@ h1, h2, h3, h4 {
     margin-bottom: 0.6rem;
 }
 
-h1 { font-size: 1.85rem; }
+h1 {
+    font-size: 1.85rem;
+    margin-top: 0rem;
+}
 h2 { font-size: 1.4rem; }
 h3 { font-size: 1.15rem; }
 
