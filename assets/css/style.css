@@ -107,6 +107,14 @@ hr {
     margin: 1.25rem 0;
 }
 
+/* article images */
+article img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+}
+
 
 /* blockquotes and notes */
 blockquote {
