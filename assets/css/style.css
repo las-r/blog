@@ -21,7 +21,7 @@ body {
 
 /* page width */
 main, header, footer {
-    max-width: 760px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 1rem 1.25rem;
 }
@@ -166,42 +166,31 @@ pre code {
 }
 
 
-/* post layout and table of contents */
-.post-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 180px;
-    gap: 2rem;
-    align-items: start;
+
+/* table of contents */
+main:has(> article):has(#toc-list li) {
+    position: relative;
 }
 
-.post-layout article {
-    min-width: 0;
+main:has(> article):has(#toc-list li) > article {
+    width: calc(100% - 210px);
+    margin-left: 0;
+    margin-right: auto;
 }
 
-.toc {
-    position: sticky;
-    top: 1.5rem;
+main:has(> article):has(#toc-list li) > .toc {
+    position: absolute;
+    top: 1rem;
+    left: calc(100% - 190px);
+    width: 170px;
     border-left: 1px solid var(--border);
     padding-left: 1rem;
-    min-width: 0;
-}
-
-.toc[hidden] {
-    display: none;
 }
 
 .toc h2 {
     font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
     color: var(--muted);
     margin: 0 0 0.75rem;
-}
-
-.toc nav {
-    display: block;
-    border: 0;
-    padding: 0;
 }
 
 .toc ul {
@@ -216,54 +205,48 @@ pre code {
     line-height: 1.4;
 }
 
-.toc li.toc-subitem {
+.toc .toc-subitem {
     padding-left: 0.8rem;
 }
 
 .toc a {
-    display: block;
     color: var(--muted);
     text-decoration: none;
     overflow-wrap: anywhere;
-    transition: color 0.15s ease;
 }
 
 .toc a:hover {
     color: var(--accent);
 }
 
-.post-content h2,
-.post-content h3 {
-    scroll-margin-top: 1.5rem;
+.toc[hidden] {
+    display: none;
 }
 
-/* smaller screens */
-@media (max-width: 680px) {
-    .post-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
+@media (max-width: 900px) {
+    main:has(> article):has(#toc-list li) > article {
+        width: 100%;
     }
 
-    .toc {
+    main:has(> article):has(#toc-list li) > .toc {
         position: static;
-        order: -1;
+        width: auto;
         border-left: 0;
         border-bottom: 1px solid var(--border);
         padding: 0 0 1rem;
+        margin-bottom: 1.5rem;
     }
 
-    .toc ul {
+    main:has(> article):has(#toc-list li) > .toc ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.4rem 1rem;
+        gap: 0.5rem 1rem;
     }
 
-    .toc li {
+    main:has(> article):has(#toc-list li) > .toc li,
+    main:has(> article):has(#toc-list li) > .toc .toc-subitem {
         margin: 0;
-    }
-
-    .toc li.toc-subitem {
-        padding-left: 0;
+        padding: 0;
     }
 }
 
