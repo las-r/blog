@@ -107,6 +107,34 @@ hr {
     margin: 1.25rem 0;
 }
 
+
+/* blockquotes and notes */
+blockquote {
+    margin: 1rem 0;
+    padding: 0.8rem 1rem;
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    color: var(--muted);
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote p + p {
+    margin-top: 0.6rem;
+}
+
+blockquote strong {
+    color: var(--accent);
+}
+
+blockquote code {
+    color: var(--text);
+}
+
+
 /* inline code and code blocks */
 code, pre {
     font-family: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Consolas, monospace;
