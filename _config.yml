@@ -10,17 +10,19 @@ baseurl: "/blog"
 # build settings
 markdown: kramdown
 highlighter: rouge
+kramdown:
+    syntax_highlighter: rouge
 permalink: /:title/
 livereload: true
 
 # exclusions
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - README.md
-  - LICENSE
+    - Gemfile
+    - Gemfile.lock
+    - node_modules/
+    - vendor/bundle/
+    - vendor/cache/
+    - vendor/gems/
+    - vendor/ruby/
+    - README.md
+    - LICENSE
