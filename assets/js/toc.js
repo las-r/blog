@@ -1,0 +1,39 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const content = document.querySelector(".post-content");
+    const list = document.getElementById("toc-list");
+    const toc = document.getElementById("toc");
+
+    if (!content || !list || !toc) return;
+
+    content.querySelectorAll("h2, h3").forEach(function (heading) {
+        if (!heading.id) {
+            const base = heading.textContent.trim().toLowerCase()
+                .replace(/[^\w\s-]/g, "")
+                .replace(/\s+/g, "-");
+
+            let id = base;
+            let n = 1;
+
+            while (document.getElementById(id)) {
+                id = base + "-" + n++;
+            }
+
+            heading.id = id;
+        }
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+
+        a.href = "#" + heading.id;
+        a.textContent = heading.textContent;
+
+        if (heading.tagName === "H3") {
+            li.classList.add("toc-subitem");
+        }
+
+        li.appendChild(a);
+        list.appendChild(li);
+    });
+
+    if (!list.children.length) toc.hidden = true;
+});

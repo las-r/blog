@@ -173,23 +173,24 @@ pre code {
     border-radius: 0;
 }
 
-
-
 /* table of contents */
 main:has(> article):has(#toc-list li) {
     position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 170px;
+    gap: 30px;
+    align-items: start;
 }
 
 main:has(> article):has(#toc-list li) > article {
-    width: calc(100% - 210px);
-    margin-left: 0;
-    margin-right: auto;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
 }
 
 main:has(> article):has(#toc-list li) > .toc {
-    position: absolute;
+    position: sticky;
     top: 1rem;
-    left: calc(100% - 190px);
     width: 170px;
     border-left: 1px solid var(--border);
     padding-left: 1rem;
@@ -232,6 +233,10 @@ main:has(> article):has(#toc-list li) > .toc {
 }
 
 @media (max-width: 900px) {
+    main:has(> article):has(#toc-list li) {
+        display: block;
+    }
+
     main:has(> article):has(#toc-list li) > article {
         width: 100%;
     }
