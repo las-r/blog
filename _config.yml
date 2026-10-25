@@ -1,5 +1,5 @@
 # site settings
-title: "las-r's blog"
+title: "las-r / blog"
 author: "Nayif Ehan"
 description: "A collection of my thoughts."
 
@@ -26,3 +26,7 @@ exclude:
     - vendor/ruby/
     - README.md
     - LICENSE
+
+# plugins
+plugins:
+  - jekyll-sitemap
