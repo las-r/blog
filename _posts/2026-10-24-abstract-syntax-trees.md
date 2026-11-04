@@ -89,6 +89,4 @@ These nodes are what allow an entire program to be represented as a single tree.
 ## Conclusion
 In conclusion, an **Abstract Syntax Tree** represents the structure of a program through a hierarchy of nodes. By nesting nodes within one another, everything from simple expressions to entire programs can be represented.
 
-In the next article, we'll look at how to turn source code into tokens, the first step toward constructing an AST from an actual program.
-
 Happy coding!
